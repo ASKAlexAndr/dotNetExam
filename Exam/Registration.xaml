@@ -9,13 +9,13 @@
         Title="Registration" Height="450" Width="800">
     <Grid>
         <Button x:Name="registr_btn" Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="476,354,0,0" VerticalAlignment="Top" Width="296" Click="Menu_login_btn_Click" Height="55"/>
-        <TextBox x:Name="loginField" HorizontalAlignment="Left" Height="28" Margin="93,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="652"/>
-        <PasswordBox x:Name="passwordField" HorizontalAlignment="Left" Height="23" Margin="93,234,0,0" VerticalAlignment="Top" Width="652"/>
+        <TextBox x:Name="loginField" MaxLength="50" HorizontalAlignment="Left" Height="28" Margin="93,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="652"/>
+        <PasswordBox x:Name="passwordField" MaxLength="50" HorizontalAlignment="Left" Height="23" Margin="93,234,0,0" VerticalAlignment="Top" Width="652"/>
         <Label x:Name="password_login_label" Content="Пароль" HorizontalAlignment="Left" Margin="21,231,0,0" VerticalAlignment="Top" Width="64"/>
         <Label x:Name="login_label" Content="Логин" HorizontalAlignment="Left" Height="29" Margin="23,175,0,0" VerticalAlignment="Top" Width="62"/>
-        <TextBox x:Name="surnameField" HorizontalAlignment="Left" Height="28" Margin="93,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="652"/>
+        <TextBox x:Name="surnameField" MaxLength="50" HorizontalAlignment="Left" Height="28" Margin="93,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="652"/>
         <Label x:Name="login_label_Copy" Content="Фамилия" HorizontalAlignment="Left" Height="29" Margin="23,123,0,0" VerticalAlignment="Top" Width="62"/>
-        <TextBox x:Name="nameField" HorizontalAlignment="Left" Height="28" Margin="88,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="652"/>
+        <TextBox x:Name="nameField" MaxLength="50" HorizontalAlignment="Left" Height="28" Margin="88,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="652"/>
         <Label x:Name="login_label_Copy1" Content="Имя" HorizontalAlignment="Left" Height="29" Margin="21,68,0,0" VerticalAlignment="Top" Width="62"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="659,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="113" Opacity="0.99"><Hyperlink x:Name="login_link" Click="Login_link_Click"><Run Text="Авторизация"/></Hyperlink></TextBlock>
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="21,10,0,0" TextWrapping="Wrap" Text="Регистрация" VerticalAlignment="Top" Height="53" Width="275" FontSize="24"/>
