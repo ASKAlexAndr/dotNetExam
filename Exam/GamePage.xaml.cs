@@ -20,9 +20,16 @@ namespace Exam
     /// </summary>
     public partial class GamePage : Page
     {
+        private System.Windows.Threading.DispatcherTimer gameTickTimer = new System.Windows.Threading.DispatcherTimer();
+
         public GamePage()
         {
             InitializeComponent();
+            gameTickTimer.Tick += TimerTick;
+        }
+        private void TimerTick(object sender, EventArgs e)
+        {
+            
         }
     }
 }

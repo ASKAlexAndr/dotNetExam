@@ -14,7 +14,7 @@ namespace DBLib
         private static string connectionString =
                @"Data Source=(localdb)\MSSQLLocalDB;" +
                @"Integrated Security=True;Connect Timeout=30;" +
-               @"AttachDbFilename=D:\Dev\Exam\DBLib\ExamDB.mdf;";
+               @"AttachDbFilename=|DataDirectory|\ExamDB.mdf;";
 
         private DbContext() {
             db = new DbConnectDataContext(connectionString);
