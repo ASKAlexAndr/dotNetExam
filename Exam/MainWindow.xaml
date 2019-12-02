@@ -8,4 +8,7 @@
         ShowsNavigationUI="False"
         Source="LoginPage.xaml"
         Title="MainWindow" Height="450" Width="800">
+    <NavigationWindow.Resources>
+        
+    </NavigationWindow.Resources>
 </NavigationWindow>

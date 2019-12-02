@@ -21,7 +21,6 @@ namespace Exam
     /// </summary>
     public partial class LoginPage : Page
     {
-        DbContext db = new DbContext();
         public LoginPage()
         {
             InitializeComponent();
@@ -39,7 +38,7 @@ namespace Exam
             {
                 string login = loginField.Text;
                 string password = passwordField.Password;
-                Users user = db.searchByLogin(login);
+                Users user = UsersContext.searchByLogin(login);
                 if (user == null)
                 {
                     throw new Exception("Пользователь не найден");
@@ -48,6 +47,7 @@ namespace Exam
                 {
                     throw new Exception("Пароль не верен");
                 }
+                Globals.player = new Player(user);
                 ToHomePage();
             }
             catch (Exception ex)

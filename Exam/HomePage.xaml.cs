@@ -23,6 +23,7 @@ namespace Exam
         public HomePage()
         {
             InitializeComponent();
+            this.DataContext = Globals.player;
         }
 
         private void Statistic_Click(object sender, RoutedEventArgs e)
@@ -33,7 +34,14 @@ namespace Exam
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
-            Uri uri = new Uri("HomePage.xaml", UriKind.Relative);
+            Uri uri = new Uri("LoginPage.xaml", UriKind.Relative);
+            this.NavigationService.Navigate(uri);
+            Globals.player = null;
+        }
+
+        private void Play_Click(object sender, RoutedEventArgs e)
+        {
+            Uri uri = new Uri("GamePage.xaml", UriKind.Relative);
             this.NavigationService.Navigate(uri);
         }
     }

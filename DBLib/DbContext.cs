@@ -6,45 +6,40 @@ using System.Threading.Tasks;
 
 namespace DBLib
 {
-    public class DbContext
+    public sealed class DbContext
     {
-        public DbConnectDataContext db = null;
-        public DbContext()
-        {
-            string connectionString =
-                @"Data Source=(localdb)\MSSQLLocalDB;" +
-                @"Integrated Security=True;Connect Timeout=30;" +
-                @"AttachDbFilename=D:\Dev\Exam\DBLib\ExamDB.mdf;";
-            this.db = new DbConnectDataContext(connectionString);
+        private DbConnectDataContext db;
+        private static volatile DbContext _instance;
+        private static object syncRoot = new Object();
+        private static string connectionString =
+               @"Data Source=(localdb)\MSSQLLocalDB;" +
+               @"Integrated Security=True;Connect Timeout=30;" +
+               @"AttachDbFilename=D:\Dev\Exam\DBLib\ExamDB.mdf;";
+
+        private DbContext() {
+            db = new DbConnectDataContext(connectionString);
         }
 
-        public Users searchByLogin(string login)
+        public static DbConnectDataContext Service
         {
-            return (from user in db.Users
-                          where user.login == login
-                          select user).FirstOrDefault();            
+            get { return Instance.db; }
         }
-        public Users createUser(string name, string surname, string login, string password)
+
+        private static DbContext Instance
         {
-            try
+            get
             {
-                if (searchByLogin(login) != null)
+                if (_instance == null)
                 {
-                    throw new Exception("Пользователь уже существует");
+                    lock (syncRoot)
+                    {
+                        if (_instance == null)
+                            _instance = new DbContext();
+                    }
                 }
-                Users user = new Users();
-                user.name = name;
-                user.surname = surname;
-                user.login = login;
-                user.password = password;
-                db.Users.InsertOnSubmit(user);
-                db.SubmitChanges();
-                return user;
+
+                return _instance;
             }
-            catch (Exception e)
-            {
-                throw e;
-            }         
         }
     }
 }

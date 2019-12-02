@@ -21,17 +21,11 @@ namespace Exam
     /// </summary>
     public partial class RegistrationPage : Page
     {
-        DbContext db = new DbContext();
         public RegistrationPage()
         {
             InitializeComponent();
         }
         
-        private void toLoginPage()
-        {
-            Uri uri = new Uri("LoginPage.xaml", UriKind.Relative);
-            this.NavigationService.Navigate(uri);
-        }
         private void Menu_login_btn_Click(object sender, RoutedEventArgs e)
         {
             string name = nameField.Text;
@@ -44,15 +38,26 @@ namespace Exam
             }
             try
             {
-                Users u = db.createUser(name, surname, login, password);
-                
-                toLoginPage();
+                Users user = UsersContext.createUser(name, surname, login, password);
+                Globals.player = new Player(user);
+                ToHomePage();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 Console.WriteLine(ex);
             }
+        }
+
+        private void ToLoginPage()
+        {
+            Uri uri = new Uri("LoginPage.xaml", UriKind.Relative);
+            this.NavigationService.Navigate(uri);
+        }
+        private void ToHomePage()
+        {
+            Uri uri = new Uri("HomePage.xaml", UriKind.Relative);
+            this.NavigationService.Navigate(uri);
         }
     }
 }

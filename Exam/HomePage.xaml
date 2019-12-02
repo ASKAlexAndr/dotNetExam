@@ -1,9 +1,10 @@
-﻿<Page x:Class="Exam.HomePage"
+﻿<Page
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Exam"
+      xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="Exam.HomePage"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="HomePage">
@@ -12,8 +13,10 @@
         <CollectionViewSource x:Key="viewScoreViewSource" Source="{Binding ViewScore, Source={StaticResource examDBDataSet}}"/>
     </Page.Resources>
 
-    <Grid DataContext="{StaticResource viewScoreViewSource}">
+    <Grid Margin="0,0,0,10">
         <Button x:Name="exit" Content="Выход" HorizontalAlignment="Left" Margin="707,10,0,0" VerticalAlignment="Top" Width="75" Click="Exit_Click" />
         <Button x:Name="statistic" Content="Статистика" HorizontalAlignment="Left" Margin="617,10,0,0" VerticalAlignment="Top" Width="75" Click="Statistic_Click"/>
+        <Button x:Name="play" Content="Играть" HorizontalAlignment="Left" Margin="251,137,0,0" VerticalAlignment="Top" Width="292" Height="125" FontSize="48" Click="Play_Click"/>
+        <Label x:Name="label" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="122" Width="490" FontSize="48" Content="{Binding Path=Score}"  ContentStringFormat="Счёт: {0}" />
     </Grid>
 </Page>
