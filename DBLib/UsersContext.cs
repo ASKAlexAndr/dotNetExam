@@ -10,7 +10,7 @@ namespace DBLib
     {
 
         private static DbConnectDataContext db = DbContext.Service;
-        public static Users searchByLogin(string login)
+        public static User searchByLogin(string login)
         {
             return (from user in db.Users
                     where user.login == login
@@ -28,7 +28,7 @@ namespace DBLib
         {
             try
             {
-                Games game = new Games();
+                Game game = new Game();
                 game.user_id = user_id;
                 game.score = score;
                 db.Games.InsertOnSubmit(game);
@@ -39,7 +39,7 @@ namespace DBLib
                 throw ex;
             }
         }
-        public static Users createUser(string name, string surname, string login, string password)
+        public static User createUser(string name, string surname, string login, string password)
         {
             try
             {
@@ -47,7 +47,7 @@ namespace DBLib
                 {
                     throw new Exception("Пользователь уже существует");
                 }
-                Users user = new Users();
+                User user = new User();
                 user.name = name;
                 user.surname = surname;
                 user.login = login;

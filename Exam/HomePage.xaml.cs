@@ -43,6 +43,7 @@ namespace Exam
         {
             GameWindow game = new GameWindow();
             game.Show();
+            Globals.player.updateScore(1);
             
             //Uri uri = new Uri("GamePage.xaml", UriKind.Relative);
             //this.NavigationService.Navigate(uri);

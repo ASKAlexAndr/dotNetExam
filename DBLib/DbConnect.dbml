@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ExamDB" Class="DbConnectDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ExamDB.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="DBLib.Properties.Settings" SettingsPropertyName="ExamDBConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=np:\\.\pipe\LOCALDB#8F2B1841\tsql\query;Initial Catalog=ExamDB;Integrated Security=True" SettingsObjectName="DBLib.Properties.Settings" SettingsPropertyName="ExamDBConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Games" Member="Games">
-    <Type Name="Games">
+    <Type Name="Game">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="score" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="Users_Games" Member="Users" ThisKey="user_id" OtherKey="Id" Type="Users" IsForeignKey="true" />
+      <Association Name="User_Game" Member="User" ThisKey="user_id" OtherKey="Id" Type="User" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Users" Member="Users">
-    <Type Name="Users">
+    <Type Name="User">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="surname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="login" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="password" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="Users_Games" Member="Games" ThisKey="Id" OtherKey="user_id" Type="Games" />
+      <Association Name="User_Game" Member="Games" ThisKey="Id" OtherKey="user_id" Type="Game" />
     </Type>
   </Table>
-  <Table Name="dbo.ViewScore" Member="ViewScore">
+  <Table Name="dbo.ViewScore" Member="ViewScores">
     <Type Name="ViewScore">
       <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="surname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />

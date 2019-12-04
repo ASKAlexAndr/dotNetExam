@@ -2,29 +2,29 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DbConnect">
   <DataContextMoniker Name="/DbConnectDataContext" />
   <nestedChildShapes>
-    <classShape Id="b50f872c-8088-4749-b5b7-7e6c14ec98d5" absoluteBounds="4.625, 1.125, 2, 1.3862939453125">
-      <DataClassMoniker Name="/DbConnectDataContext/Games" />
+    <classShape Id="3f64606d-8f08-471e-82d6-4fbe7a5aeff7" absoluteBounds="5.5, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DbConnectDataContext/Game" />
       <nestedChildShapes>
-        <elementListCompartment Id="dd44a935-664b-48f6-979e-395f92984ec5" absoluteBounds="4.6400000000000006, 1.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="045eafdf-b9f8-4c9c-be5e-dd8ce93e010f" absoluteBounds="5.515, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="0fc7d907-b1f6-48ca-8948-178b59c7bb83" absoluteBounds="0.625, 1, 2, 1.7708968098958331">
-      <DataClassMoniker Name="/DbConnectDataContext/Users" />
+    <classShape Id="0c1201f3-37f5-4543-a2d6-da2477e80734" absoluteBounds="0.875, 0.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DbConnectDataContext/User" />
       <nestedChildShapes>
-        <elementListCompartment Id="a7e226bc-fdbf-462e-952c-b80fa2bc836e" absoluteBounds="0.64000000000000012, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="9de8642d-0719-4a5f-a5e3-f6df0b65e42d" absoluteBounds="0.88999999999999968, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.625 : 1.81814697265625); (4.625 : 1.81814697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-      <AssociationMoniker Name="/DbConnectDataContext/Users/Users_Games" />
+    <associationConnector edgePoints="[(2.875 : 1.44314697265625); (5.5 : 1.44314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DbConnectDataContext/User/User_Game" />
       <nodes>
-        <classShapeMoniker Id="0fc7d907-b1f6-48ca-8948-178b59c7bb83" />
-        <classShapeMoniker Id="b50f872c-8088-4749-b5b7-7e6c14ec98d5" />
+        <classShapeMoniker Id="0c1201f3-37f5-4543-a2d6-da2477e80734" />
+        <classShapeMoniker Id="3f64606d-8f08-471e-82d6-4fbe7a5aeff7" />
       </nodes>
     </associationConnector>
-    <classShape Id="8135a364-4593-4271-96e8-52fb82e8987e" absoluteBounds="3, 3.5, 2, 1.3862939453125">
+    <classShape Id="1ef6d928-8ee1-4064-9860-a25b2eb2f45a" absoluteBounds="4.125, 2.375, 2, 1.3862939453125">
       <DataClassMoniker Name="/DbConnectDataContext/ViewScore" />
       <nestedChildShapes>
-        <elementListCompartment Id="71027a6e-6ab0-4030-8b82-b44195f233e5" absoluteBounds="3.015, 3.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="be8c9b37-432c-4507-8f8b-b7eda3660d85" absoluteBounds="4.14, 2.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

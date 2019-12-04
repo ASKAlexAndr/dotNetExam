@@ -12,7 +12,7 @@ namespace Exam
         public string name;
         public string surname;
         public int id;
-        public Player(Users user)
+        public Player(User user)
         {
             this.name = user.name;
             this.surname = user.surname;

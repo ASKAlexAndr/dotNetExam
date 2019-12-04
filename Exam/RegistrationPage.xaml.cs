@@ -38,7 +38,7 @@ namespace Exam
             }
             try
             {
-                Users user = UsersContext.createUser(name, surname, login, password);
+                User user = UsersContext.createUser(name, surname, login, password);
                 Console.WriteLine(user);
                 Globals.player = new Player(user);
                 ToHomePage();

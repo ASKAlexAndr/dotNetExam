@@ -38,7 +38,7 @@ namespace Exam
             {
                 string login = loginField.Text;
                 string password = passwordField.Password;
-                Users user = UsersContext.searchByLogin(login);
+                User user = UsersContext.searchByLogin(login);
                 if (user == null)
                 {
                     throw new Exception("Пользователь не найден");

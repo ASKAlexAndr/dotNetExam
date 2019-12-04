@@ -12,10 +12,11 @@ namespace DBLib
         private static volatile DbContext _instance;
         private static object syncRoot = new Object();
         private static string connectionString =
-               @"Data Source=(localdb)\MSSQLLocalDB;" +
-               @"Integrated Security=True;Connect Timeout=30;" +
-               @"AttachDbFilename=|DataDirectory|\ExamDB.mdf;";
+               //@"Data Source=(localdb)\MSSQLLocalDB;" +
+               //@"Integrated Security=True;Connect Timeout=30;" +
+               //@"AttachDbFilename=|DataDirectory|\ExamDB.mdf;";
                //@"AttachDbFilename=D:\Dev\Exam\DBLib\ExamDB.mdf;";
+               @"Data Source=(localdb)\test;Initial Catalog = ExamDB; Integrated Security = True; Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=True";
 
         private DbContext() {
             db = new DbConnectDataContext(connectionString);
