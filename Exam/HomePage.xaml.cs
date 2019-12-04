@@ -41,8 +41,11 @@ namespace Exam
 
         private void Play_Click(object sender, RoutedEventArgs e)
         {
-            Uri uri = new Uri("GamePage.xaml", UriKind.Relative);
-            this.NavigationService.Navigate(uri);
+            GameWindow game = new GameWindow();
+            game.Show();
+            
+            //Uri uri = new Uri("GamePage.xaml", UriKind.Relative);
+            //this.NavigationService.Navigate(uri);
         }
     }
 }
