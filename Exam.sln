@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exam", "Exam\Exam.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBLib", "DBLib\DBLib.csproj", "{CA74FCD3-C311-4DF6-B9A5-D62CCC14883C}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ExamDatabase", "ExamDatabase\ExamDatabase.sqlproj", "{121A9339-F070-43C3-B8B5-BBB3F65B2CD6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,24 @@ Global
 		{CA74FCD3-C311-4DF6-B9A5-D62CCC14883C}.Release|x64.Build.0 = Release|Any CPU
 		{CA74FCD3-C311-4DF6-B9A5-D62CCC14883C}.Release|x86.ActiveCfg = Release|x86
 		{CA74FCD3-C311-4DF6-B9A5-D62CCC14883C}.Release|x86.Build.0 = Release|x86
+		{121A9339-F070-43C3-B8B5-BBB3F65B2CD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{121A9339-F070-43C3-B8B5-BBB3F65B2CD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{121A9339-F070-43C3-B8B5-BBB3F65B2CD6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{121A9339-F070-43C3-B8B5-BBB3F65B2CD6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{121A9339-F070-43C3-B8B5-BBB3F65B2CD6}.Debug|x64.Build.0 = Debug|Any CPU
+		{121A9339-F070-43C3-B8B5-BBB3F65B2CD6}.Debug|x64.Deploy.0 = Debug|Any CPU
+		{121A9339-F070-43C3-B8B5-BBB3F65B2CD6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{121A9339-F070-43C3-B8B5-BBB3F65B2CD6}.Debug|x86.Build.0 = Debug|Any CPU
+		{121A9339-F070-43C3-B8B5-BBB3F65B2CD6}.Debug|x86.Deploy.0 = Debug|Any CPU
+		{121A9339-F070-43C3-B8B5-BBB3F65B2CD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{121A9339-F070-43C3-B8B5-BBB3F65B2CD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{121A9339-F070-43C3-B8B5-BBB3F65B2CD6}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{121A9339-F070-43C3-B8B5-BBB3F65B2CD6}.Release|x64.ActiveCfg = Release|Any CPU
+		{121A9339-F070-43C3-B8B5-BBB3F65B2CD6}.Release|x64.Build.0 = Release|Any CPU
+		{121A9339-F070-43C3-B8B5-BBB3F65B2CD6}.Release|x64.Deploy.0 = Release|Any CPU
+		{121A9339-F070-43C3-B8B5-BBB3F65B2CD6}.Release|x86.ActiveCfg = Release|Any CPU
+		{121A9339-F070-43C3-B8B5-BBB3F65B2CD6}.Release|x86.Build.0 = Release|Any CPU
+		{121A9339-F070-43C3-B8B5-BBB3F65B2CD6}.Release|x86.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
