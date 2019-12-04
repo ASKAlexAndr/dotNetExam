@@ -125,10 +125,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ExamDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="ExamDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>ExamDB.mdf</DependentUpon>
     </Content>
   </ItemGroup>
