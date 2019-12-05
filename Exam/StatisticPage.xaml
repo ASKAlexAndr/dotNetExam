@@ -25,21 +25,21 @@
             </ListView.ItemContainerStyle>
             <ListView.View>
                 <GridView>
-                    <GridViewColumn x:Name="nameColumn" Header="name" Width="80">
+                    <GridViewColumn x:Name="nameColumn" Header="Имя" Width="300">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Label Content="{Binding name}" Margin="6,-1,-6,-1"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn x:Name="surnameColumn" Header="surname" Width="80">
+                    <GridViewColumn x:Name="surnameColumn" Header="Фамилия" Width="300">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Label Content="{Binding surname}" Margin="-6,-1"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn x:Name="scoreColumn" Header="score" Width="80">
+                    <GridViewColumn x:Name="scoreColumn" Header="Счёт" Width="200">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Label Content="{Binding score}" Margin="-6,-1"/>

@@ -22,7 +22,7 @@ namespace DBLib
                  .Select(el => el.score)
                  .AsEnumerable()
                  .DefaultIfEmpty(0)
-                 .Sum();
+                 .Max();
         }
         public static void updateUserScore(int score, int user_id)
         {
