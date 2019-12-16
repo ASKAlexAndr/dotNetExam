@@ -44,7 +44,7 @@ namespace Exam.Game.Models
 
         public void OnKeyPressedEvent(Direction direction)
         {
-            snake.SetSnakeDirection(direction);
+            snake.SetDirection(direction);
         }
     }
 }

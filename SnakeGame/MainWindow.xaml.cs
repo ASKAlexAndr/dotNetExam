@@ -13,18 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Exam
+namespace SnakeGame
 {
     /// <summary>
-    /// Логика взаимодействия для GamePage.xaml
+    /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public partial class GameWindow : Window
+    public partial class MainWindow : Window
     {
-        public GameWindow()
+        public MainWindow()
         {
             InitializeComponent();
-            GameVM viewModel = new GameVM();
-            DataContext = viewModel;
         }
     }
 }

@@ -1,0 +1,81 @@
+﻿<Window x:Class="Snake.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Snake"
+        mc:Ignorable="d"
+        Title="{ Binding snakeGame.score, Mode=OneWay}" >
+    <Window.InputBindings>
+        <KeyBinding Key="Up" Command="{Binding UpKeyPressedCommand}"></KeyBinding>
+        <KeyBinding Key="Right" Command="{Binding RightKeyPressedCommand}"></KeyBinding>
+        <KeyBinding Key="Down" Command="{Binding DownKeyPressedCommand}"></KeyBinding>
+        <KeyBinding Key="Left" Command="{Binding LeftKeyPressedCommand}"></KeyBinding>
+    </Window.InputBindings>
+    <Grid>
+        <Border
+    BorderThickness="5"
+    BorderBrush="Black"
+    Background="White"
+    HorizontalAlignment="Left"
+    VerticalAlignment="Top"
+    Margin="10 10 0 0"
+    Width="{Binding snakeGame.board.Width, Mode=OneWay}" 
+    Height="{Binding snakeGame.board.Height, Mode=OneWay}">
+            <Canvas HorizontalAlignment="Left" VerticalAlignment="Top" 
+                Width="{Binding snakeGame.board.Width, Mode=OneWay}" 
+                Height="{Binding snakeGame.board.Height, Mode=OneWay}">
+                <!--Head-->
+                <Rectangle Width="{Binding snakeGame.snake.Head.Width, Mode=OneWay}" 
+                       Height="{Binding snakeGame.snake.Head.Height, Mode=OneWay}" 
+                       Fill="DarkGreen">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="{Binding snakeGame.snake.Head.XPositionPixelsScreen, Mode=OneWay}" 
+                                            Y="{Binding snakeGame.snake.Head.YPositionPixelsScreen, Mode=OneWay}">
+                            </TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <!--Food-->
+                <Ellipse Width="{Binding snakeGame.food.Width, Mode=OneWay}" 
+                     Height="{Binding snakeGame.food.Height, Mode=OneWay}" 
+                     Fill="Red">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="{Binding snakeGame.food.XPositionPixelsScreen, Mode=OneWay}" 
+                                            Y="{Binding snakeGame.food.YPositionPixelsScreen, Mode=OneWay}">
+                            </TranslateTransform>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+
+                <!--Body-->
+                <ItemsControl ItemsSource="{Binding snakeGame.snake.Body}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <Canvas></Canvas>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Rectangle Width="{Binding Width}" Height="{Binding Height}" Fill="Green">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <TranslateTransform X="{Binding XPositionPixelsScreen, Mode=OneWay}" 
+                                                        Y="{Binding YPositionPixelsScreen, Mode=OneWay}">
+                                        </TranslateTransform>
+                                        <RotateTransform CenterX="{Binding XPosition, Mode=OneWay}" 
+                                                     CenterY="{Binding YPosition, Mode=OneWay}" 
+                                                     Angle="{Binding DirectionOfTravelDegrees, Mode=OneWay}">
+                                        </RotateTransform>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </Canvas>
+        </Border>
+    </Grid>
+</Window>
