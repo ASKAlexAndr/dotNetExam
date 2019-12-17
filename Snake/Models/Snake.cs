@@ -12,6 +12,9 @@ namespace Snake.Models
         private ObservableCollection<SnakeBody> _body;
 
         public delegate void EatFood();
+        public delegate void HitSelf();
+
+        public static event HitSelf OnHitSelf;
         public static event EatFood OnEatFood;
 
         public Snake()
@@ -40,7 +43,10 @@ namespace Snake.Models
                 _body.Add(part);
                 OnEatFood?.Invoke();
             }
-            
+            if (Head.HitSelf(this))
+            {
+                OnHitSelf?.Invoke();
+            }
 
         }
         public void SetDirection(Direction direction)

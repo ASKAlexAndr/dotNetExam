@@ -40,12 +40,8 @@ namespace Exam
 
         private void Play_Click(object sender, RoutedEventArgs e)
         {
-            //SnakeGame.createGame();
-            //GameWindow game = new GameWindow();
-            //game.Show();
-            //Globals.player.updateScore(5);
-            //Uri uri = new Uri("GamePage.xaml", UriKind.Relative);
-            //this.NavigationService.Navigate(uri);
+            Snake.MainWindow game = new Snake.MainWindow(Globals.player.id);
+            game.Show();
         }
     }
 }

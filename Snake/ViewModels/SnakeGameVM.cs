@@ -10,9 +10,9 @@ namespace Snake.ViewModels
 {
     class SnakeGameVM : NotificationBase
     {
-        public SnakeGameVM()
+        public SnakeGameVM(int userId)
         {
-            snakeGame = new SnakeGame();
+            snakeGame = new SnakeGame(userId);
             UpKeyPressedCommand = new DelegateCommand(OnUpKeyPressed);
             RightKeyPressedCommand = new DelegateCommand(OnRightKeyPressed);
             DownKeyPressedCommand = new DelegateCommand(OnDownKeyPressed);

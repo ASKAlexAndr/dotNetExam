@@ -17,6 +17,5 @@
         <Button x:Name="exit" Content="Выход" HorizontalAlignment="Left" Margin="707,10,0,0" VerticalAlignment="Top" Width="75" Click="Exit_Click" />
         <Button x:Name="statistic" Content="Статистика" HorizontalAlignment="Left" Margin="617,10,0,0" VerticalAlignment="Top" Width="75" Click="Statistic_Click"/>
         <Button x:Name="play" Content="Играть" HorizontalAlignment="Left" Margin="251,137,0,0" VerticalAlignment="Top" Width="292" Height="125" FontSize="48" Click="Play_Click"/>
-        <Label x:Name="label" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="122" Width="490" FontSize="48" Content="{Binding Path=Score}"  ContentStringFormat="Счёт: {0}" />
     </Grid>
 </Page>

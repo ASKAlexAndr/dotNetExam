@@ -14,6 +14,22 @@ namespace Snake.Models
             _yPosition = Constants.DefaultYposition;
         }
 
+        public bool HitSelf(Snake snake)
+        {
+            bool hit = false;
+            double xDiff;
+            double yDiff;
+            foreach (SnakeBody body in snake.Body)
+            {
+                xDiff = Math.Abs(XPositionPixelsScreen - body.XPositionPixelsScreen);
+                yDiff = Math.Abs(YPositionPixelsScreen - body.YPositionPixelsScreen);
+                if (xDiff < _width && yDiff < _height)
+                {
+                    hit = true;
+                }
+            }
+            return hit;
+        }
         public bool EatFood(Food food)
         {
             double xDiff = Math.Abs(XPositionPixelsScreen - food.XPositionPixelsScreen);

@@ -84,6 +84,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ExamDBDataSet.cs">
+      <DependentUpon>ExamDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ExamDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -171,6 +174,10 @@
     <ProjectReference Include="..\DBLib\DBLib.csproj">
       <Project>{ca74fcd3-c311-4df6-b9a5-d62ccc14883c}</Project>
       <Name>DBLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Snake\Snake.csproj">
+      <Project>{37928e37-a8a8-4986-9598-b1eb606e1afe}</Project>
+      <Name>Snake</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

@@ -19,9 +19,9 @@ namespace Snake.Models
 
         public void ChangePosition(Snake snake)
         {
-            bool changed = false;
-            double xDiff;
-            double yDiff;
+            //bool changed = false;
+            //double xDiff;
+            //double yDiff;
             _xPosition = _randomValue.Next(0, (int)Constants.DefaultBoardWidth);
             _yPosition = _randomValue.Next(0, (int)Constants.DefaultBoardHeight);
             RaisePropertyChanged("YPosition");

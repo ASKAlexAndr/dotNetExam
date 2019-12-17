@@ -39,7 +39,7 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn x:Name="scoreColumn" Header="Счёт" Width="200">
+                    <GridViewColumn x:Name="scoreColumn" Header="Счёт" Width="150">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Label Content="{Binding score}" Margin="-6,-1"/>

@@ -21,11 +21,16 @@ namespace Snake
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(int userId)
         {
             InitializeComponent();
-            SnakeGameVM viewModel = new SnakeGameVM();
+            SnakeGameVM viewModel = new SnakeGameVM(userId);
             DataContext = viewModel;
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

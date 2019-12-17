@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Snake"
         mc:Ignorable="d"
-        Title="{ Binding snakeGame.score, Mode=OneWay}" >
+        Title="Snake" >
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVisConverter" />
+    </Window.Resources>
     <Window.InputBindings>
         <KeyBinding Key="Up" Command="{Binding UpKeyPressedCommand}"></KeyBinding>
         <KeyBinding Key="Right" Command="{Binding RightKeyPressedCommand}"></KeyBinding>
@@ -21,7 +24,8 @@
     VerticalAlignment="Top"
     Margin="10 10 0 0"
     Width="{Binding snakeGame.board.Width, Mode=OneWay}" 
-    Height="{Binding snakeGame.board.Height, Mode=OneWay}">
+    Height="{Binding snakeGame.board.Height, Mode=OneWay}"
+             Visibility="{Binding snakeGame.isGameOn,  Converter={StaticResource BoolToVisConverter}}">
             <Canvas HorizontalAlignment="Left" VerticalAlignment="Top" 
                 Width="{Binding snakeGame.board.Width, Mode=OneWay}" 
                 Height="{Binding snakeGame.board.Height, Mode=OneWay}">
@@ -76,6 +80,19 @@
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
             </Canvas>
+
         </Border>
+        <Label x:Name="label" Content="Счёт:" HorizontalAlignment="Left" Margin="237,169,0,0" 
+               VerticalAlignment="Top" Height="117" Width="241"
+                Visibility="{Binding snakeGame.isGameOff,  Converter={StaticResource BoolToVisConverter}}" FontSize="72"/>
+        <Label x:Name="label_Copy"
+            Content="{Binding snakeGame.score, Mode=OneWay}"
+            HorizontalAlignment="Left"
+               Margin="412,169,0,0" 
+            VerticalAlignment="Top" Height="117" Width="241"
+            Visibility="{Binding snakeGame.isGameOff, Converter={StaticResource BoolToVisConverter}}" FontSize="72"/>
+        <Button x:Name="button"
+                 Visibility="{Binding snakeGame.isGameOff, Converter={StaticResource BoolToVisConverter}}"
+                Content="Выход" HorizontalAlignment="Left" Margin="295,389,0,0" VerticalAlignment="Top" Width="183" Height="73" Click="button_Click" FontSize="36"/>
     </Grid>
 </Window>

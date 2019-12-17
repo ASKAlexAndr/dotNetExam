@@ -4,12 +4,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exam", "Exam\Exam.csproj", "{DB666C6A-8D82-4509-8454-05D1303575BC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{37928E37-A8A8-4986-9598-B1EB606E1AFE} = {37928E37-A8A8-4986-9598-B1EB606E1AFE}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBLib", "DBLib\DBLib.csproj", "{CA74FCD3-C311-4DF6-B9A5-D62CCC14883C}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ExamDatabase", "ExamDatabase\ExamDatabase.sqlproj", "{121A9339-F070-43C3-B8B5-BBB3F65B2CD6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake", "Snake\Snake.csproj", "{37928E37-A8A8-4986-9598-B1EB606E1AFE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CA74FCD3-C311-4DF6-B9A5-D62CCC14883C} = {CA74FCD3-C311-4DF6-B9A5-D62CCC14883C}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
