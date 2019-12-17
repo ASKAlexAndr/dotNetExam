@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Snake"
         mc:Ignorable="d"
+        Width="795" 
+        Height="600"
         Title="Snake" >
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="BoolToVisConverter" />
@@ -22,7 +24,6 @@
     Background="White"
     HorizontalAlignment="Left"
     VerticalAlignment="Top"
-    Margin="10 10 0 0"
     Width="{Binding snakeGame.board.Width, Mode=OneWay}" 
     Height="{Binding snakeGame.board.Height, Mode=OneWay}"
              Visibility="{Binding snakeGame.isGameOn,  Converter={StaticResource BoolToVisConverter}}">

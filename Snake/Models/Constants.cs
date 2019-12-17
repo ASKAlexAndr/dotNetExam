@@ -8,9 +8,9 @@ namespace Snake.Models
 {
     class Constants
     {
-        public const double DefaultBoardWidth = 800;
-        public const double DefaultBoardHeight = 600; 
-        public const double DefaultGameStepMilliseconds = 20;
+        public const double DefaultBoardWidth = 780;
+        public const double DefaultBoardHeight = 560; 
+        public const double DefaultGameStepMilliseconds = 80;
         public const double DefaultXposition = 50;
         public const double DefaultYposition = 50;
         public const double BodyWidth = 20;

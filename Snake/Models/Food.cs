@@ -12,8 +12,8 @@ namespace Snake.Models
         public Food(double snakeXPosition, double snakeYPosition)
         {
             _randomValue = new Random((int)DateTime.Now.Ticks);
-            _xPosition = _randomValue.Next(0, (int)Constants.DefaultBoardWidth);
-            _yPosition = _randomValue.Next(0, (int)Constants.DefaultBoardHeight);
+            _xPosition = _randomValue.Next(10, (int)Constants.DefaultBoardWidth - 10);
+            _yPosition = _randomValue.Next(10, (int)Constants.DefaultBoardHeight - 10);
 
         }
 
@@ -22,8 +22,8 @@ namespace Snake.Models
             //bool changed = false;
             //double xDiff;
             //double yDiff;
-            _xPosition = _randomValue.Next(0, (int)Constants.DefaultBoardWidth);
-            _yPosition = _randomValue.Next(0, (int)Constants.DefaultBoardHeight);
+            _xPosition = _randomValue.Next(10, (int)Constants.DefaultBoardWidth-10);
+            _yPosition = _randomValue.Next(10, (int)Constants.DefaultBoardHeight-10);
             RaisePropertyChanged("YPosition");
             RaisePropertyChanged("YPositionPixelsScreen");
             RaisePropertyChanged("XPosition");

@@ -51,9 +51,18 @@ namespace Snake.Models
 
         }
 
+        public void NextLevel()
+        {
+            if (_gameStepMilliseconds > 20)
+            {
+                _gameStepMilliseconds -= 5;
+                _gameTimer.Interval = TimeSpan.FromMilliseconds(_gameStepMilliseconds);
+            }
+        }
         private void EatFoodEventHandler()
         {
             food.ChangePosition(snake);
+            NextLevel();
             score++;
             RaisePropertyChanged("score");
         }
