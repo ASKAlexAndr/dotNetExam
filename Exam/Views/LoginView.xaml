@@ -8,6 +8,7 @@
     <Grid x:Name="LoginLayout">
         <Label x:Name="label" Content="{Binding login.LoginName}" HorizontalAlignment="Left" Margin="10,17,0,0" VerticalAlignment="Top" Height="60" Width="405"/>
         <Button x:Name="regBtn" Content="Регистрация"
+                Command="{Binding ToRegCommand}"
                 HorizontalAlignment="Left" Margin="675,17,0,0"
                 VerticalAlignment="Top" Width="115" Height="40"
                 FontSize="18" />

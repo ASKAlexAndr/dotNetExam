@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Exam.Views"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800">
-    <Grid>
+    <Grid x:Name="RegGrid" HorizontalAlignment="Right" Width="800">
         <Button x:Name="ToLoginBtn" 
                 Content="Button" 
                 HorizontalAlignment="Right"

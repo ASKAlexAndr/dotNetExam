@@ -24,7 +24,7 @@ namespace Exam
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new NavigationVM();
+            DataContext = new NavigationVM();
         }
 
     }

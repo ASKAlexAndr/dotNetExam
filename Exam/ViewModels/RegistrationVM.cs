@@ -15,14 +15,8 @@ namespace Exam.ViewModels
         public RegistrationVM()
         {
             login = new LoginModel();
-            ToLoginCommand = new DelegateCommand(OnRegClick);
         }
 
-        public ICommand ToLoginCommand { get; private set; }
-
-        public void OnRegClick(object arg)
-        {
-            ;
-        }
+        public ICommand ToLoginCommand { get; set; }
     }
 }

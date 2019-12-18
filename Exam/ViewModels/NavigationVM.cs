@@ -39,18 +39,18 @@ namespace Exam.ViewModels
         {
             login = new LoginModel();
             LoginName = "FFFF";
-            loginVM = new LoginVM();
-            
+            loginVM = new LoginVM();            
             registrationVM = new RegistrationVM();
 
-            //loginVM.ToRegCommand = new DelegateCommand(OpenRegister);
+            registrationVM.ToLoginCommand = new DelegateCommand(OpenLogin);
+            loginVM.ToRegCommand = new DelegateCommand(OpenRegister);
             OpenRegister(this);
         }
 
         public void OpenLogin(object obj)
         {
-            //CurrentView = loginVM;
-            CurrentView = new LoginVM();
+            CurrentView = loginVM;
+            //CurrentView = new LoginVM();
         }
         public void OpenRegister(object obj)
         {
