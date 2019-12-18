@@ -15,9 +15,19 @@ namespace Exam.ViewModels
         public LoginVM()
         {
             login = new LoginModel();
+            LoginCommand = new DelegateCommand(Auth);
         }
 
         public ICommand ToRegCommand { get; set; }
-        
+        public ICommand LoginCommand { get; set; }
+        public ICommand ToHomeCommand { get; set; }
+
+        public void Auth(object arg)
+        {
+            if (login.Auth())
+            {
+                ToHomeCommand.Execute(this);
+            }
+        }        
     }
 }

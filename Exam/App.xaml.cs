@@ -11,11 +11,6 @@ namespace Exam
     /// <summary>
     /// Логика взаимодействия для App.xaml
     /// </summary>
-    public static class Globals
-    {
-        private static Player _player = null;
-        public static Player player { get => _player; set => _player = value; }
-    }
     public partial class App : Application
     {
     }

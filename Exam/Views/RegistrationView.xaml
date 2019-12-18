@@ -7,13 +7,26 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800">
     <Grid x:Name="RegGrid" HorizontalAlignment="Right" Width="800">
-        <Button x:Name="ToLoginBtn" 
-                Content="Button" 
-                HorizontalAlignment="Right"
-                VerticalAlignment="Top"
-                IsEnabled="True"
-                Command="{Binding ToLoginCommand}"
-                Width="75" Click="ToLoginBtn_Click"/>
+
+        <Label x:Name="RegTitle" HorizontalAlignment="Left" Margin="21,10,0,0" Content="Регистрация" VerticalAlignment="Top" Height="53" Width="275" FontSize="24"/>
+        <Button x:Name="regBtn" Content="Авторизация"
+            Command="{Binding ToLoginCommand}"
+            HorizontalAlignment="Left" Margin="675,17,0,0"
+            VerticalAlignment="Top" Width="115" Height="40"
+            FontSize="18" />
+        <Label x:Name="password_login_label" Content="Пароль" HorizontalAlignment="Left" Margin="21,294,0,0" VerticalAlignment="Top" Width="91" Height="50"/>
+        <Label x:Name="login_label" Content="Логин" HorizontalAlignment="Left" Height="55" Margin="24,234,0,0" VerticalAlignment="Top" Width="88"/>
+        <Label x:Name="login_label_Copy" Content="Фамилия" HorizontalAlignment="Left" Height="56" Margin="24,173,0,0" VerticalAlignment="Top" Width="88"/>
+        <Label x:Name="login_label_Copy1" Content="Имя" HorizontalAlignment="Left" Height="56" Margin="24,112,0,0" VerticalAlignment="Top" Width="88"/>
+        <TextBox x:Name="nameBox" HorizontalAlignment="Left" Margin="140,129,0,0" TextWrapping="Wrap" 
+                 Text="{Binding reg.Name}" VerticalAlignment="Top" Height="39" Width="570"/>
+        <TextBox x:Name="surnameBox" HorizontalAlignment="Left" Margin="140,190,0,0" TextWrapping="Wrap" 
+                 Text="{Binding reg.Surname}" VerticalAlignment="Top" Height="39" Width="570"/>
+        <TextBox x:Name="loginBox" HorizontalAlignment="Left" Margin="140,250,0,0" TextWrapping="Wrap" 
+                 Text="{Binding reg.Login}" VerticalAlignment="Top" Height="39" Width="570"/>
+        <TextBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="140,305,0,0" TextWrapping="Wrap" 
+                 Text="{Binding reg.Password}" VerticalAlignment="Top" Height="39" Width="570"/>
+        <Button x:Name="loginBt" Content="Регистрация" Command="{Binding RegistrateCommand}" HorizontalAlignment="Left" Margin="285,395,0,0" VerticalAlignment="Top" Width="220" Height="60" FontSize="24"/>
 
     </Grid>
 </UserControl>

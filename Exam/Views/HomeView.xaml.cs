@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Exam.Views
 {
     /// <summary>
-    /// Логика взаимодействия для RegistratinView.xaml
+    /// Логика взаимодействия для HomeView.xaml
     /// </summary>
-    public partial class RegistrationView : UserControl
+    public partial class HomeView : UserControl
     {
-        public RegistrationView()
+        public HomeView()
         {
             InitializeComponent();
         }

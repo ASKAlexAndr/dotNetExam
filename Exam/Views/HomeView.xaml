@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="Exam.Views.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Exam.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Button x:Name="exit" Content="Выход" Command="{Binding LogOutCommand}" HorizontalAlignment="Left" Margin="707,10,0,0" VerticalAlignment="Top" Width="75" />
+        <Button x:Name="statistic" Content="Статистика"  Command="{Binding ToStatisticCommand}" HorizontalAlignment="Left" Margin="617,10,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="play" Content="Играть" Command="{Binding PlayCommand}" HorizontalAlignment="Left" Margin="251,137,0,0" VerticalAlignment="Top" Width="292" Height="125" FontSize="48"/>
+        <Label x:Name="record" Content="{Binding Score}" ContentStringFormat="Рекорд: {0}" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top" Height="88" Width="285"/>
+
+    </Grid>
+</UserControl>

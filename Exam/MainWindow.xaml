@@ -17,6 +17,13 @@
         <DataTemplate DataType="{x:Type viewmodles:RegistrationVM}">
             <views:RegistrationView/>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodles:StatisticVM}">
+            <views:StatisticView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodles:HomeVM}">
+            <views:HomeView/>
+        </DataTemplate>
+
     </Window.Resources>
     <Grid x:Name="LayoutRoot">
         

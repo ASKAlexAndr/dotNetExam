@@ -12,7 +12,7 @@ namespace Snake.ViewModels
     {
         public SnakeGameVM(int userId)
         {
-            snakeGame = new SnakeGame(userId);
+            snakeGame = new Models.SnakeGame(userId);
             UpKeyPressedCommand = new DelegateCommand(OnUpKeyPressed);
             RightKeyPressedCommand = new DelegateCommand(OnRightKeyPressed);
             DownKeyPressedCommand = new DelegateCommand(OnDownKeyPressed);
@@ -23,7 +23,10 @@ namespace Snake.ViewModels
         public ICommand LeftKeyPressedCommand { get; private set; }
         public ICommand RightKeyPressedCommand { get; private set; }
 
-        public SnakeGame snakeGame { get; }
+
+        public ICommand ToHomeCommand { get; set; }
+
+        public Models.SnakeGame snakeGame { get; }
 
         public void OnUpKeyPressed(object arg)
         {

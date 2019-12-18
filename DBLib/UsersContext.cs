@@ -28,9 +28,11 @@ namespace DBLib
         {
             try
             {
-                Game game = new Game();
-                game.user_id = user_id;
-                game.score = score;
+                Game game = new Game
+                {
+                    user_id = user_id,
+                    score = score
+                };
                 db.Games.InsertOnSubmit(game);
                 db.SubmitChanges();
             }
@@ -47,11 +49,13 @@ namespace DBLib
                 {
                     throw new Exception("Пользователь уже существует");
                 }
-                User user = new User();
-                user.name = name;
-                user.surname = surname;
-                user.login = login;
-                user.password = password;
+                User user = new User
+                {
+                    name = name,
+                    surname = surname,
+                    login = login,
+                    password = password
+                };
                 db.Users.InsertOnSubmit(user);
                 db.SubmitChanges();
                 return user;

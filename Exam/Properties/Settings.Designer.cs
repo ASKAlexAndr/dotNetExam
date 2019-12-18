@@ -66,5 +66,16 @@ namespace Exam.Properties {
                 return ((string)(this["ExamDBConnectionString3"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=np:\\\\.\\pipe\\LOCALDB#D4FB2B70\\tsql\\query;Initial Catalog=ExamDB;Integr" +
+            "ated Security=True")]
+        public string ExamDBConnectionString4 {
+            get {
+                return ((string)(this["ExamDBConnectionString4"]));
+            }
+        }
     }
 }

@@ -6,11 +6,17 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800">
     <Grid x:Name="LoginLayout">
-        <Label x:Name="label" Content="{Binding login.LoginName}" HorizontalAlignment="Left" Margin="10,17,0,0" VerticalAlignment="Top" Height="60" Width="405"/>
         <Button x:Name="regBtn" Content="Регистрация"
                 Command="{Binding ToRegCommand}"
                 HorizontalAlignment="Left" Margin="675,17,0,0"
                 VerticalAlignment="Top" Width="115" Height="40"
                 FontSize="18" />
+        <Label x:Name="LoginTitle" Content="Авторизация" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="65" Width="290" FontSize="36"/>
+        <Label x:Name="LoginLabel" Content="Логин" HorizontalAlignment="Left" Margin="50,190,0,0" VerticalAlignment="Top" Width="125" FontSize="22"/>
+
+        <TextBox x:Name="loginBox" HorizontalAlignment="Left" Margin="155,205,0,0" TextWrapping="Wrap" Text="{Binding login.LoginName}" VerticalAlignment="Top" Height="39" Width="570"/>
+        <Label x:Name="PasswordLabel" Content="Пароль" HorizontalAlignment="Left" Margin="50,290,0,0" VerticalAlignment="Top" Width="125" FontSize="22"/>
+        <TextBox x:Name="passwordBox" Text="{Binding login.Password}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="155,290,0,0" Height="39" Width="570" FontSize="14"/>
+        <Button x:Name="loginBt" Content="Вход" Command="{Binding LoginCommand}" HorizontalAlignment="Left" Margin="285,395,0,0" VerticalAlignment="Top" Width="220" Height="60" FontSize="24"/>
     </Grid>
 </UserControl>
