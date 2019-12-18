@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace Snake.Models
+namespace Exam.Models
 {
-    class DelegateCommand : ICommand
+    public class DelegateCommand : ICommand
     {
         private Action<object> _execute;
         private Func<object, bool> _canExecute;

@@ -1,4 +1,5 @@
-﻿using Exam.ViewModels;
+﻿using Exam.Models;
+using Exam.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,18 +15,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Exam
+namespace Exam.Views
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для LoginView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoginView : UserControl
     {
-        public MainWindow()
+        public LoginView()
         {
             InitializeComponent();
-            this.DataContext = new NavigationVM();
         }
-
     }
 }

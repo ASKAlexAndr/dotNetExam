@@ -1,14 +1,24 @@
-﻿<NavigationWindow x:Class="Exam.MainWindow"
+﻿<Window x:Class="Exam.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Exam"
+        xmlns:viewmodles="clr-namespace:Exam.ViewModels"
+        xmlns:views="clr-namespace:Exam.Views"
         mc:Ignorable="d"
-        ShowsNavigationUI="False"
-        Source="LoginPage.xaml"
-        Title="MainWindow" Height="450" Width="800">
-    <NavigationWindow.Resources>
-        
-    </NavigationWindow.Resources>
-</NavigationWindow>
+        Title="Game"
+        Height="600" 
+        Width="800" IsEnabled="False">
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type viewmodles:LoginVM}">
+            <views:LoginView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodles:RegistrationVM}">
+            <views:RegistrationView/>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid x:Name="LayoutRoot">
+        <ContentControl x:Name="Pages" Content="{Binding CurrentView}" />
+    </Grid>
+</Window>

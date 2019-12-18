@@ -1,0 +1,19 @@
+﻿<UserControl x:Name="RegView" x:Class="Exam.Views.RegistrationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Exam.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800">
+    <Grid>
+        <Button x:Name="ToLoginBtn" 
+                Content="Button" 
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                IsEnabled="True"
+                Command="{Binding ToLoginCommand}"
+                Width="75" Click="ToLoginBtn_Click"/>
+
+    </Grid>
+</UserControl>

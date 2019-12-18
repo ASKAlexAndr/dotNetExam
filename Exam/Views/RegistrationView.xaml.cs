@@ -1,5 +1,4 @@
-﻿using Exam.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,18 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Exam
+namespace Exam.Views
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для RegistratinView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class RegistrationView : UserControl
     {
-        public MainWindow()
+        public RegistrationView()
         {
             InitializeComponent();
-            this.DataContext = new NavigationVM();
         }
 
+        private void ToLoginBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Click");
+        }
     }
 }
